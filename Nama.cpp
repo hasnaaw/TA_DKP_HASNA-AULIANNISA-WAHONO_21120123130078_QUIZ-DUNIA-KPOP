@@ -19,10 +19,12 @@ __fastcall TForm2::TForm2(TComponent* Owner)
 void __fastcall TForm2::NEXTClick(TObject *Sender)
 {
 String pemain = Nama_Label->Text;
-
-TForm3 *form3=new TForm3(this);
-form3->Halo_Label->Caption= "Annyeong "+pemain;
-form3->ShowModal();
-delete form3;
+if (pemain.IsEmpty()) {
+	ShowMessage("Wajib Masukkan Nama Terlebih Dahulu");
+}
+else {
+	Form3->Halo_Label->Caption= "Annyeong "+pemain;
+	Form3->Show();
+}
 }
 //---------------------------------------------------------------------------
