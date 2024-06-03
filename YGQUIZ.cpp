@@ -112,10 +112,8 @@ void __fastcall TForm8::SubmitClick(TObject *Sender)
 
    else{
 	   Submit->Enabled=false;
-	   TForm9 *form9= new TForm9(this);
-	   form9->SetPoints(points);
-	   form9->ShowModal();
-	   delete form9;
+	   Form9->SetPoints(points);
+	   Form9->Show();
    }
 }
 //---------------------------------------------------------------------------
